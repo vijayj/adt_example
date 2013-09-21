@@ -8,4 +8,38 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".TodoActivity" >
 
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnAdd"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="15dp" >
+
+    </ListView>
+
+    <EditText
+        android:id="@+id/newText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:ems="10"
+        android:hint="@string/hintText" >
+
+        <requestFocus />
+    </EditText>
+
+    <Button
+        android:id="@+id/btnAdd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/newText"
+        android:layout_toRightOf="@+id/newText"
+        android:onClick="onAddedItem"
+        android:text="@string/btnAdd" />
+
 </RelativeLayout>
